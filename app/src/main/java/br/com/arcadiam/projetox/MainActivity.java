@@ -1,4 +1,4 @@
-package br.com.canaltecnico.projetox;
+package br.com.arcadiam.projetox;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;

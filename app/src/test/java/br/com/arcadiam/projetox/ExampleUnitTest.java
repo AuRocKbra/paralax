@@ -1,4 +1,4 @@
-package br.com.canaltecnico.projetox;
+package br.com.arcadiam.projetox;
 
 import org.junit.Test;
 
