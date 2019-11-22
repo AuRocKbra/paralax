@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Typeface fonte;
     private Button btoNewGame;
     private Button btoSair;
+    private Button btoSave;
     private MediaPlayer playerMusica;
 
     @Override
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         this.btoNewGame.setTypeface( this.fonte );
         this.btoSair = findViewById( R.id.sairGame );
         this.btoSair.setTypeface( this.fonte );
+        this.btoSave = findViewById( R.id.gameSaved );
+        this.btoSave.setTypeface( this.fonte );
     ////////////////////////
 
     //Metodos
