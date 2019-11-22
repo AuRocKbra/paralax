@@ -1,28 +1,20 @@
 package br.com.arcadiam.projetox;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Typeface;
-import android.media.SoundPool;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textoPirncipal;
     private Typeface fonte;
     private Button btoNewGame;
     private Button btoSair;
-    private SoundPool som;
+    private MediaPlayer playerMusica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println( e );
                     }
                 }
-                else{
-                    //quando não há alteração na tela
+                else{//quando não há alteração na tela
+
                 }
             }
         } );
@@ -64,5 +56,29 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
     ///////////////////////
+    }
+
+    @Override
+    protected void onPause(){
+        /*
+        * O metodo onPause é usado para definir os atributos da activity quando o usuário faz
+        * alteração das telas ou até mesmo do aplicativo.
+        * */
+        super.onPause();
+        this.playerMusica.release();//Liberar recursos de memória usados pelo MediaPlayer
+        this.playerMusica = null;
+    }
+
+    @Override
+    protected  void onResume(){
+        /*
+        * O metodo onResume é executado sempre que a activity é executada. Sua interação acontece em
+        * tempo de execução, ou seja, a criação de variáveis e atribuição de valores acontece aqui
+        * em tempo de execução.
+        * */
+        super.onResume();
+        this.playerMusica = MediaPlayer.create( this, R.raw.theme );//Carrega arquivo de áudio na memória
+        this.playerMusica.start(); //inicia a execução do arquivo de áudio
+        this.playerMusica.setLooping( true ); // se o valor informado for true a execução do arquivo ficará em looping
     }
 }

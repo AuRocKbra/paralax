@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ProjetoX</string>
     <string name="texto_estoria">Era uma vez...</string>
-    <string name="btoNewGame">New Game</string>
+    <string name="btoNewGame">Nova aventura</string>
     <string name="descrip_tema">Tema</string>
     <string name="sairGame">Sair</string>
 </resources>
