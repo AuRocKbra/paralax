@@ -14,6 +14,8 @@
         android:layout_marginBottom="50dp"
         android:text="@string/btoNewGame"
         android:textSize="18sp"
+        android:textColor="@color/corTextoVerde"
+        android:background="@color/fundoPreto"
         app:layout_constraintBottom_toTopOf="@+id/sairGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -25,9 +27,11 @@
         android:layout_marginBottom="50dp"
         android:text="@string/sairGame"
         android:textSize="18sp"
+        android:background="@color/fundoPreto"
+        android:textColor="@color/corTextoVerde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
         android:id="@+id/gameSaved"
@@ -36,6 +40,8 @@
         android:layout_marginBottom="50dp"
         android:text="@string/btoGameSaved"
         android:textSize="18sp"
+        android:textColor="@color/corTextoVerde"
+        android:background="@color/fundoPreto"
         app:layout_constraintBottom_toTopOf="@+id/newGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
